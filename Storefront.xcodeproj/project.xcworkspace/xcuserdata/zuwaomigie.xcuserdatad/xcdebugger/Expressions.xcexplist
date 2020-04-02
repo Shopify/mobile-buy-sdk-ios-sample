@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Graph.Client.init(shopDomain:apiKey:session:locale:):Graph.Client.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "filepath">
+            </PersistentString>
+            <PersistentString
+               value = "#file">
+            </PersistentString>
+            <PersistentString
+               value = "fileUrl.absoluteString">
+            </PersistentString>
+            <PersistentString
+               value = "URL(fileURLWithPath: #file + &quot;Buy/Generated&quot;).absoluteString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
