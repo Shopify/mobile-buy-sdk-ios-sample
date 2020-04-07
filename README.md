@@ -2,7 +2,9 @@
 
 # Storefront App
 
-The Mobile Buy SDK ships with a sample application that demonstrates how to build a custom storefront on iOS. Using this sample application, a user can browse your shop's products and collections, add merchandise to a cart, and then checkout using Apple Pay or a web checkout.
+The sample application demonstrates how to build a custom storefront on iOS using [Shopify's mobile buy SDK](https://github.com/Shopify/mobile-buy-sdk-ios). Using this sample application, a user can browse your shop's products and collections, add merchandise to a cart, and then checkout using Apple Pay or a web checkout.
+
+Note: This sample application is not actively being maintained. Hence, the version of SDK being used may not be the recent version. 
 
 ## Setup
 
