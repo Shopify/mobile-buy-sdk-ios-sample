@@ -302,16 +302,16 @@ final class ClientQuery {
         
         let currencyCode  = Storefront.CurrencyCode(rawValue: checkout.currencyCode)!
         let paymentAmount = Storefront.MoneyInput(amount: checkout.paymentDue, currencyCode: currencyCode)
-        let paymentInput  = Storefront.TokenizedPaymentInputV2.create(
+        let paymentInput  = Storefront.TokenizedPaymentInputV3.create(
             paymentAmount:  paymentAmount,
             idempotencyKey: idempotencyToken,
             billingAddress: mailingAddress,
-            type:           CheckoutViewModel.PaymentType.applePay.rawValue,
-            paymentData:    token
+            paymentData:    token,
+            type:           Storefront.PaymentTokenType.applePay
         )
         
         return Storefront.buildMutation { $0
-            .checkoutCompleteWithTokenizedPaymentV2(checkoutId: GraphQL.ID(rawValue: checkout.id), payment: paymentInput) { $0
+            .checkoutCompleteWithTokenizedPaymentV3(checkoutId: GraphQL.ID(rawValue: checkout.id), payment: paymentInput) { $0
                 .checkoutUserErrors { $0
                     .field()
                     .message()
