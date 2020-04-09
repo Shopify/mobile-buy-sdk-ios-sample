@@ -363,7 +363,7 @@ final class Client {
         let task     = self.client.mutateGraphWith(mutation) { response, error in
             error.debugPrint()
             
-            if let payment = response?.checkoutCompleteWithTokenizedPaymentV2?.payment {
+            if let payment = response?.checkoutCompleteWithTokenizedPaymentV3?.payment {
                 
                 print("Payment created, fetching status...")
                 self.fetchCompletedPayment(payment.id.rawValue) { paymentViewModel in
