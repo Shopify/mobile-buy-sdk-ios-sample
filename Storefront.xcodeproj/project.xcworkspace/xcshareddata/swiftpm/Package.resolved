@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Mobile Buy SDK",
+        "repositoryURL": "https://github.com/Shopify/mobile-buy-sdk-ios",
+        "state": {
+          "branch": null,
+          "revision": "e761f09656c8798cf9e4b3898df7b0f4d960e51a",
+          "version": "5.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

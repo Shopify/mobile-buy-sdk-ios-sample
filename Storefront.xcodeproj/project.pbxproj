@@ -3,12 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		810E2563243D1F970025B670 /* Buy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810E2555243D1E400025B670 /* Buy.framework */; };
-		810E2565243D1FE30025B670 /* Buy.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 810E2555243D1E400025B670 /* Buy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9A0ED6861E83F120008C605E /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0ED6851E83F120008C605E /* Serializable.swift */; };
 		9A0ED68A1E83FF2D008C605E /* GraphQL+Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0ED6891E83FF2D008C605E /* GraphQL+Serializable.swift */; };
 		9A0ED6911E842467008C605E /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0ED6901E842467008C605E /* CartButton.swift */; };
@@ -23,6 +21,8 @@
 		9A27C32D1E9120AD00218EE8 /* CheckoutViewModel+PayCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27C32C1E9120AD00218EE8 /* CheckoutViewModel+PayCheckout.swift */; };
 		9A27C32F1E91218100218EE8 /* AddressViewModel+PayAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27C32E1E91218100218EE8 /* AddressViewModel+PayAddress.swift */; };
 		9A27C3311E91232500218EE8 /* ShippingRateViewModel+PayShippingRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27C3301E91232500218EE8 /* ShippingRateViewModel+PayShippingRate.swift */; };
+		9A3714DD251B7B3500FE742B /* Pay in Frameworks */ = {isa = PBXBuildFile; productRef = 9A3714DC251B7B3500FE742B /* Pay */; };
+		9A3714DF251B7B3500FE742B /* Buy in Frameworks */ = {isa = PBXBuildFile; productRef = 9A3714DE251B7B3500FE742B /* Buy */; };
 		9A4069D61E8EEDC9000254CD /* ShippingRateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4069D51E8EEDC9000254CD /* ShippingRateViewModel.swift */; };
 		9A4EDDD22126116E0071BA56 /* CustomerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4EDDD12126116E0071BA56 /* CustomerCoordinator.swift */; };
 		9A4EDDD9212611A60071BA56 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4EDDD8212611A60071BA56 /* AccountController.swift */; };
@@ -98,65 +98,6 @@
 		9AFA3B871E6DFF530056C5AA /* SelectableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA3B861E6DFF530056C5AA /* SelectableCell.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		810E2554243D1E400025B670 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 810E254A243D1E400025B670 /* Buy.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AEF60F31E5F42D90067FA90;
-			remoteInfo = Buy;
-		};
-		810E2556243D1E400025B670 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 810E254A243D1E400025B670 /* Buy.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AC2EFC81F6818180037E0D7;
-			remoteInfo = "Buy watchOS";
-		};
-		810E2558243D1E400025B670 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 810E254A243D1E400025B670 /* Buy.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AF256421F6FEE50005BB0C9;
-			remoteInfo = "Buy tvOS";
-		};
-		810E255A243D1E400025B670 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 810E254A243D1E400025B670 /* Buy.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9A4068DC1E8E7658000254CD;
-			remoteInfo = Pay;
-		};
-		810E255C243D1E400025B670 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 810E254A243D1E400025B670 /* Buy.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AFA38EA1E64850A0056C5AA;
-			remoteInfo = BuyTests;
-		};
-		810E255E243D1E400025B670 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 810E254A243D1E400025B670 /* Buy.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9A4068E41E8E7659000254CD;
-			remoteInfo = PayTests;
-		};
-		810E2560243D1F7A0025B670 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 810E254A243D1E400025B670 /* Buy.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9AEF60F21E5F42D90067FA90;
-			remoteInfo = Buy;
-		};
-		810E2566243D206C0025B670 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 810E254A243D1E400025B670 /* Buy.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9A4068DB1E8E7658000254CD;
-			remoteInfo = Pay;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		9AEF61C81E606C800067FA90 /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -164,7 +105,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				810E2565243D1FE30025B670 /* Buy.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,7 +112,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		810E254A243D1E400025B670 /* Buy.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Buy.xcodeproj; path = "mobile-buy-sdk-ios/Buy.xcodeproj"; sourceTree = "<group>"; };
 		9A0ED6851E83F120008C605E /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		9A0ED6891E83FF2D008C605E /* GraphQL+Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GraphQL+Serializable.swift"; sourceTree = "<group>"; };
 		9A0ED6901E842467008C605E /* CartButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
@@ -270,26 +209,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				810E2563243D1F970025B670 /* Buy.framework in Frameworks */,
+				9A3714DD251B7B3500FE742B /* Pay in Frameworks */,
+				9A3714DF251B7B3500FE742B /* Buy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		810E254B243D1E400025B670 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				810E2555243D1E400025B670 /* Buy.framework */,
-				810E2557243D1E400025B670 /* Buy.framework */,
-				810E2559243D1E400025B670 /* Buy.framework */,
-				810E255B243D1E400025B670 /* Pay.framework */,
-				810E255D243D1E400025B670 /* BuyTests.xctest */,
-				810E255F243D1E400025B670 /* PayTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		810E2562243D1F970025B670 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,7 +467,6 @@
 		9ADAD45E1E563091008AC561 = {
 			isa = PBXGroup;
 			children = (
-				9AEF61BE1E606C5F0067FA90 /* Buy */,
 				9ADAD4691E563091008AC561 /* Storefront */,
 				9ADAD4681E563091008AC561 /* Products */,
 				810E2562243D1F970025B670 /* Frameworks */,
@@ -595,14 +521,6 @@
 			name = Discounts;
 			sourceTree = "<group>";
 		};
-		9AEF61BE1E606C5F0067FA90 /* Buy */ = {
-			isa = PBXGroup;
-			children = (
-				810E254A243D1E400025B670 /* Buy.xcodeproj */,
-			);
-			name = Buy;
-			sourceTree = "<group>";
-		};
 		9AEF61CA1E606EEB0067FA90 /* Fragments */ = {
 			isa = PBXGroup;
 			children = (
@@ -642,10 +560,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				810E2567243D206C0025B670 /* PBXTargetDependency */,
-				810E2561243D1F7A0025B670 /* PBXTargetDependency */,
 			);
 			name = Storefront;
+			packageProductDependencies = (
+				9A3714DC251B7B3500FE742B /* Pay */,
+				9A3714DE251B7B3500FE742B /* Buy */,
+			);
 			productName = Storefront;
 			productReference = 9ADAD4671E563091008AC561 /* Storefront.app */;
 			productType = "com.apple.product-type.application";
@@ -657,7 +577,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Shopify Inc.";
 				TargetAttributes = {
 					9ADAD4661E563091008AC561 = {
@@ -682,65 +602,17 @@
 				Base,
 			);
 			mainGroup = 9ADAD45E1E563091008AC561;
+			packageReferences = (
+				9A3714DB251B7B3500FE742B /* XCRemoteSwiftPackageReference "mobile-buy-sdk-ios" */,
+			);
 			productRefGroup = 9ADAD4681E563091008AC561 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 810E254B243D1E400025B670 /* Products */;
-					ProjectRef = 810E254A243D1E400025B670 /* Buy.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				9ADAD4661E563091008AC561 /* Storefront */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		810E2555243D1E400025B670 /* Buy.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Buy.framework;
-			remoteRef = 810E2554243D1E400025B670 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		810E2557243D1E400025B670 /* Buy.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Buy.framework;
-			remoteRef = 810E2556243D1E400025B670 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		810E2559243D1E400025B670 /* Buy.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Buy.framework;
-			remoteRef = 810E2558243D1E400025B670 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		810E255B243D1E400025B670 /* Pay.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Pay.framework;
-			remoteRef = 810E255A243D1E400025B670 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		810E255D243D1E400025B670 /* BuyTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = BuyTests.xctest;
-			remoteRef = 810E255C243D1E400025B670 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		810E255F243D1E400025B670 /* PayTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = PayTests.xctest;
-			remoteRef = 810E255E243D1E400025B670 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9ADAD4651E563091008AC561 /* Resources */ = {
@@ -849,19 +721,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		810E2561243D1F7A0025B670 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Buy;
-			targetProxy = 810E2560243D1F7A0025B670 /* PBXContainerItemProxy */;
-		};
-		810E2567243D206C0025B670 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Pay;
-			targetProxy = 810E2566243D206C0025B670 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		9ADAD46E1E563091008AC561 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -907,6 +766,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -931,7 +791,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -965,6 +825,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -983,10 +844,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -998,7 +860,10 @@
 				CODE_SIGN_ENTITLEMENTS = Storefront/Storefront.entitlements;
 				DEVELOPMENT_TEAM = A7XGC83MZE;
 				INFOPLIST_FILE = Storefront/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shopify.buysdk.storefront;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1012,7 +877,10 @@
 				CODE_SIGN_ENTITLEMENTS = Storefront/Storefront.entitlements;
 				DEVELOPMENT_TEAM = A7XGC83MZE;
 				INFOPLIST_FILE = Storefront/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shopify.buysdk.storefront;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1041,6 +909,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9A3714DB251B7B3500FE742B /* XCRemoteSwiftPackageReference "mobile-buy-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Shopify/mobile-buy-sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9A3714DC251B7B3500FE742B /* Pay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A3714DB251B7B3500FE742B /* XCRemoteSwiftPackageReference "mobile-buy-sdk-ios" */;
+			productName = Pay;
+		};
+		9A3714DE251B7B3500FE742B /* Buy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A3714DB251B7B3500FE742B /* XCRemoteSwiftPackageReference "mobile-buy-sdk-ios" */;
+			productName = Buy;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9ADAD45F1E563091008AC561 /* Project object */;
 }
