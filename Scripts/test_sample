@@ -1,0 +1,11 @@
+ #!/usr/bin/env bash
+
+set -ex
+set -eo pipefail
+
+xcodebuild build \
+-project "Storefront.xcodeproj" \
+-scheme "Storefront" \
+-sdk iphonesimulator \
+-destination "id=$CURRENT_SIMULATOR_UUID" \
+ | xcpretty -c
