@@ -1,6 +1,6 @@
 ![Mobile Buy SDK](https://cloud.githubusercontent.com/assets/5244861/26738020/885c12ac-479a-11e7-8914-2853ec09f89f.png)
 
-![Test](https://github.com/Shopify/mobile-buy-sdk-ios-sample/workflows/Test/badge.svg?event=push)
+[![Test](https://github.com/Shopify/mobile-buy-sdk-ios-sample/workflows/Test/badge.svg?event=push)](https://github.com/Shopify/mobile-buy-sdk-ios-sample/actions?query=workflow%3ATest)
 [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/Shopify/mobile-buy-sdk-ios-sample/blob/master/LICENSE)
 
 # Storefront App
