@@ -1,5 +1,8 @@
 ![Mobile Buy SDK](https://cloud.githubusercontent.com/assets/5244861/26738020/885c12ac-479a-11e7-8914-2853ec09f89f.png)
 
+[![Test](https://github.com/Shopify/mobile-buy-sdk-ios-sample/workflows/Test/badge.svg?event=push)](https://github.com/Shopify/mobile-buy-sdk-ios-sample/actions?query=workflow%3ATest)
+[![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://github.com/Shopify/mobile-buy-sdk-ios-sample/blob/master/LICENSE)
+
 # Storefront App
 
 The sample application demonstrates how to build a custom storefront on iOS using [Shopify's mobile buy SDK](https://github.com/Shopify/mobile-buy-sdk-ios). Using this sample application, a user can browse your shop's products and collections, add merchandise to a cart, and then checkout using Apple Pay or a web checkout.

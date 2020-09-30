@@ -1,4 +1,0 @@
-[submodule "mobile-buy-sdk-ios"]
-	path = mobile-buy-sdk-ios
-	url = git@github.com:Shopify/mobile-buy-sdk-ios.git
-	branch = release/2020-04-auto-generated
