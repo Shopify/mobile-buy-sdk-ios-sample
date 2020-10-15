@@ -43,6 +43,7 @@ extension CheckoutViewModel {
             shippingAddress:  self.shippingAddress?.payAddress,
             shippingRate:     self.shippingRate?.payShippingRate,
             currencyCode:     self.currencyCode,
+            totalDuties:      self.totalDuties,
             subtotalPrice:    self.subtotalPrice,
             needsShipping:    self.requiresShipping,
             totalTax:         self.totalTax,

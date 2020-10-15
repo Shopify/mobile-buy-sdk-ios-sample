@@ -53,6 +53,7 @@ final class CheckoutViewModel: ViewModel {
     let currencyCode:     String
     let subtotalPrice:    Decimal
     let totalTax:         Decimal
+    let totalDuties:      Decimal?
     let totalPrice:       Decimal
     let paymentDue:       Decimal
     
@@ -86,6 +87,7 @@ final class CheckoutViewModel: ViewModel {
         self.currencyCode     = model.currencyCode.rawValue
         self.subtotalPrice    = model.subtotalPriceV2.amount
         self.totalTax         = model.totalTaxV2.amount
+        self.totalDuties      = model.totalDuties?.amount
         self.totalPrice       = model.totalPriceV2.amount
         self.paymentDue       = model.paymentDueV2.amount
         

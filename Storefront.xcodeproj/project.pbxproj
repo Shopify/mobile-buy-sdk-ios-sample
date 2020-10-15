@@ -915,8 +915,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Shopify/mobile-buy-sdk-ios";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.1.0;
+				branch = "unstable-api-duties-snapshot";
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

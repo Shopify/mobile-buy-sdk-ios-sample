@@ -43,6 +43,14 @@ extension Storefront.OrderConnectionQuery {
                     .amount()
                     .currencyCode()
                 }
+                .originalTotalDuties { $0
+                    .amount()
+                    .currencyCode()
+                }
+                .currentTotalDuties { $0
+                    .amount()
+                    .currencyCode()
+                }
             }
         }
     }
