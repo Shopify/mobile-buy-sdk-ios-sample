@@ -30,8 +30,8 @@ import Pay
 
 final class Client {
     
-    static let shopDomain = "graphql.myshopify.com"
-    static let apiKey     = "8e2fef6daed4b93cf4e731f580799dd1"
+    static let shopDomain = "careumask.myshopify.com"
+    static let apiKey     = "52515a2a34189a7af11258ba88cd19b7"
     static let merchantID = "merchant.com.your.id"
     static let locale   = Locale(identifier: "en-US")
     
