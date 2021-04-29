@@ -293,6 +293,28 @@ final class Client {
     }
     
     @discardableResult
+    func fetchUpdatedCheckout(_ id: String, completion: @escaping (CheckoutViewModel?) -> Void) -> Task {
+        let retry = Graph.RetryHandler<Storefront.QueryRoot>(endurance: .finite(30)) { response, error -> Bool in
+            error.debugPrint()
+            return (response?.node as? Storefront.Checkout)?.ready ?? false == false
+        }
+        
+        let query = ClientQuery.queryForCheckout(id)
+        let task  = client.queryGraphWith(query, cachePolicy: .networkOnly, retryHandler: retry) { response, error in
+            error.debugPrint()
+            
+            if let checkout = response?.node as? Storefront.Checkout {
+                completion(checkout.viewModel)
+            } else {
+                completion(nil)
+            }
+        }
+        
+        task.resume()
+        return task
+    }
+    
+    @discardableResult
     func updateCheckout(_ id: String, updatingEmail email: String, completion: @escaping (CheckoutViewModel?) -> Void) -> Task {
         let mutation = ClientQuery.mutationForUpdateCheckout(id, updatingEmail: email)
         let task     = self.client.mutateGraphWith(mutation) { response, error in
@@ -334,8 +356,8 @@ final class Client {
         let retry = Graph.RetryHandler<Storefront.QueryRoot>(endurance: .finite(30)) { response, error -> Bool in
             error.debugPrint()
             
-            if let response = response {
-                return (response.node as! Storefront.Checkout).availableShippingRates?.ready ?? false == false
+            if let checkout = response?.node as? Storefront.Checkout {
+                return checkout.availableShippingRates?.ready ?? false == false || checkout.ready == false
             } else {
                 return false
             }

@@ -5,9 +5,9 @@
         "package": "Mobile Buy SDK",
         "repositoryURL": "https://github.com/Shopify/mobile-buy-sdk-ios",
         "state": {
-          "branch": "unstable-api-duties-snapshot",
-          "revision": "4b4f63af8d5144b1b29665eff3bb143f8f05db53",
-          "version": null
+          "branch": null,
+          "revision": "ae783b33100e23b8cd6e61d848d966923e3cc992",
+          "version": "6.0.0"
         }
       }
     ]

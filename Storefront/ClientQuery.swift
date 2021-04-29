@@ -191,6 +191,16 @@ final class ClientQuery {
         }
     }
     
+    static func queryForCheckout(_ id: String) -> Storefront.QueryRootQuery {
+        Storefront.buildQuery { $0
+            .node(id: GraphQL.ID(rawValue: id)) { $0
+                .onCheckout { $0
+                    .fragmentForCheckout()
+                }
+            }
+        }
+    }
+    
     static func mutationForUpdateCheckout(_ id: String, updatingPartialShippingAddress address: PayPostalAddress) -> Storefront.MutationQuery {
         
         let checkoutID   = GraphQL.ID(rawValue: id)
