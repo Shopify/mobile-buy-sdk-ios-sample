@@ -327,7 +327,7 @@ extension CartViewController: PaySessionDelegate {
             if checkout.ready {
                 provide(checkout.payCheckout)
             } else {
-                Client.shared.fetchUpdatedCheckout(checkout.id) { checkout in
+                Client.shared.pollForReadyCheckout(checkout.id) { checkout in
                     provide(checkout?.payCheckout)
                 }
             }
@@ -344,7 +344,7 @@ extension CartViewController: PaySessionDelegate {
             if updatedCheckout.ready {
                 provide(updatedCheckout.payCheckout)
             } else {
-                Client.shared.fetchUpdatedCheckout(checkout.id) { checkout in
+                Client.shared.pollForReadyCheckout(checkout.id) { checkout in
                     provide(checkout?.payCheckout)
                 }
             }
@@ -375,7 +375,7 @@ extension CartViewController: PaySessionDelegate {
                 
                 print("Checkout email updated: \(email)")
                 
-                Client.shared.fetchUpdatedCheckout(checkout.id) { readyCheckout in
+                Client.shared.pollForReadyCheckout(checkout.id) { readyCheckout in
                     guard let checkout = readyCheckout?.payCheckout else {
                         print("Checkout failed to get ready...")
                         completeTransaction(.failure)

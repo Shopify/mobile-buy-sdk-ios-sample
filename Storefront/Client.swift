@@ -293,7 +293,8 @@ final class Client {
     }
     
     @discardableResult
-    func fetchUpdatedCheckout(_ id: String, completion: @escaping (CheckoutViewModel?) -> Void) -> Task {
+    func pollForReadyCheckout(_ id: String, completion: @escaping (CheckoutViewModel?) -> Void) -> Task {
+
         let retry = Graph.RetryHandler<Storefront.QueryRoot>(endurance: .finite(30)) { response, error -> Bool in
             error.debugPrint()
             return (response?.node as? Storefront.Checkout)?.ready ?? false == false
