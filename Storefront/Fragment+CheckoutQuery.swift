@@ -104,6 +104,10 @@ extension Storefront.CheckoutQuery {
                 }
             }
         }
+        .totalDuties { $0
+            .amount()
+            .currencyCode()
+        }
         .webUrl()
         .currencyCode()
         .subtotalPriceV2 { $0

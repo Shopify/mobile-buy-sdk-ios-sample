@@ -318,13 +318,20 @@ extension CartViewController: PaySessionDelegate {
         
         print("Updating checkout with shipping address for tax estimate...")
         Client.shared.updateCheckout(checkout.id, updatingPartialShippingAddress: address) { checkout in
-            
-            if let checkout = checkout {   
-                provide(checkout.payCheckout)
-            } else {
+            guard let checkout = checkout else {
                 print("Update for checkout failed.")
                 provide(nil)
+                return
             }
+
+            if checkout.ready {
+                provide(checkout.payCheckout)
+            } else {
+                Client.shared.pollForReadyCheckout(checkout.id) { checkout in
+                    provide(checkout?.payCheckout)
+                }
+            }
+            
         }
     }
     
@@ -333,7 +340,14 @@ extension CartViewController: PaySessionDelegate {
         print("Selecting shipping rate...")
         Client.shared.updateCheckout(checkout.id, updatingShippingRate: shippingRate) { updatedCheckout in
             print("Selected shipping rate.")
-            provide(updatedCheckout?.payCheckout)
+            guard let updatedCheckout = updatedCheckout else { return provide(nil) }
+            if updatedCheckout.ready {
+                provide(updatedCheckout.payCheckout)
+            } else {
+                Client.shared.pollForReadyCheckout(checkout.id) { checkout in
+                    provide(checkout?.payCheckout)
+                }
+            }
         }
     }
     
@@ -360,14 +374,24 @@ extension CartViewController: PaySessionDelegate {
                 }
                 
                 print("Checkout email updated: \(email)")
-                print("Completing checkout...")
-                Client.shared.completeCheckout(checkout, billingAddress: authorization.billingAddress, applePayToken: authorization.token, idempotencyToken: paySession.identifier) { payment in
-                    if let payment = payment, checkout.paymentDue == payment.amount {
-                        print("Checkout completed successfully.")
-                        completeTransaction(.success)
-                    } else {
-                        print("Checkout failed to complete.")
+                
+                Client.shared.pollForReadyCheckout(checkout.id) { readyCheckout in
+                    guard let checkout = readyCheckout?.payCheckout else {
+                        print("Checkout failed to get ready...")
                         completeTransaction(.failure)
+                        return
+                    }
+                    
+                    print("Checkout is ready...")
+                    print("Completing checkout...")
+                    Client.shared.completeCheckout(checkout, billingAddress: authorization.billingAddress, applePayToken: authorization.token, idempotencyToken: paySession.identifier) { payment in
+                        if let payment = payment, checkout.paymentDue == payment.amount {
+                            print("Checkout completed successfully.")
+                            completeTransaction(.success)
+                        } else {
+                            print("Checkout failed to complete.")
+                            completeTransaction(.failure)
+                        }
                     }
                 }
             }
