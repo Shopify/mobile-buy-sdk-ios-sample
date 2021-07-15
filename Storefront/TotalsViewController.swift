@@ -31,6 +31,7 @@ import PassKit
 enum PaymentType {
     case applePay
     case webCheckout
+    case shopPay
 }
 
 protocol TotalsControllerDelegate: class {
@@ -75,6 +76,13 @@ class TotalsViewController: UIViewController {
         webCheckout.setTitleColor(.white, for: .normal)
         self.buttonStackView.addArrangedSubview(webCheckout)
         
+        let shopPayCheckout = RoundedButton(type: .system)
+        shopPayCheckout.backgroundColor = UIColor(red: 0.35, green: 0.19, blue: 0.96, alpha: 1.00)
+        shopPayCheckout.addTarget(self, action: #selector(shopPayCheckoutAction(_:)), for: .touchUpInside)
+        shopPayCheckout.setTitle("Shop Pay",  for: .normal)
+        shopPayCheckout.setTitleColor(.white, for: .normal)
+        self.buttonStackView.addArrangedSubview(shopPayCheckout)
+        
         if PKPaymentAuthorizationController.canMakePayments() {
             let applePay = PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .black)
             applePay.addTarget(self, action: #selector(applePayAction(_:)), for: .touchUpInside)
@@ -87,6 +95,10 @@ class TotalsViewController: UIViewController {
     //
     @objc func webCheckoutAction(_ sender: Any) {
         self.delegate?.totalsController(self, didRequestPaymentWith: .webCheckout)
+    }
+    
+    @objc func shopPayCheckoutAction(_ sender: Any) {
+        self.delegate?.totalsController(self, didRequestPaymentWith: .shopPay)
     }
     
     @objc func applePayAction(_ sender: Any) {

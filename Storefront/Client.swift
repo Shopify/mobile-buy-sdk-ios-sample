@@ -135,6 +135,25 @@ final class Client {
         return task
     }
     
+    @discardableResult
+    func fetchShopURL(completion: @escaping (URL?) -> Void) -> Task {
+        
+        let query = ClientQuery.queryForShopURL()
+        let task  = self.client.queryGraphWith(query) { (query, error) in
+            error.debugPrint()
+            
+            if let query = query {
+                completion(query.shop.primaryDomain.url)
+            } else {
+                print("Failed to fetch shop url: \(String(describing: error))")
+                completion(nil)
+            }
+        }
+        
+        task.resume()
+        return task
+    }
+    
     // ----------------------------------
     //  MARK: - Collections -
     //

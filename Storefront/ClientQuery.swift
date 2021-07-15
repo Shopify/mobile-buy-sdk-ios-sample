@@ -92,6 +92,16 @@ final class ClientQuery {
         }
     }
     
+    static func queryForShopURL() -> Storefront.QueryRootQuery {
+        return Storefront.buildQuery { $0
+            .shop { $0
+                .primaryDomain { $0
+                    .url()
+                }
+            }
+        }
+    }
+    
     // ----------------------------------
     //  MARK: - Storefront -
     //
