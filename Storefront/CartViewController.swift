@@ -117,6 +117,12 @@ class CartViewController: ParallaxViewController {
         self.navigationController?.pushViewController(webController, animated: true)
     }
     
+    func openSafariViewControllerFor(_ url: URL) {
+        let safariViewController = SFSafariViewController(url: url)
+        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.pushViewController(safariViewController, animated: false)
+    }
+
     func buildShopPayURL(_ shopURL: URL, cartItems: [CartItem]) -> URL? {
         func decodeBase64String(_ base64String: String) -> String {
             let decodedData = Data(base64Encoded: base64String)!
@@ -236,7 +242,7 @@ extension CartViewController: TotalsControllerDelegate {
                 
                 let shopPayURL = self.buildShopPayURL(shopURL, cartItems: cartItems)
                 if (shopPayURL != nil) {
-                    self.openWKWebViewControllerFor(shopPayURL!, title: "Shop Pay")
+                    self.openSafariViewControllerFor(shopPayURL!)
                 }
             }
         } else {
