@@ -36,7 +36,7 @@ enum PaginationDirection {
     case horizontal
 }
 
-protocol Paginating: class {
+protocol Paginating: AnyObject {
     
     var paginationThreshold: CGFloat             { get }
     var paginationState:     PaginationState     { get set }

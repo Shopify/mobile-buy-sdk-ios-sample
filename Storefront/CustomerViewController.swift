@@ -26,7 +26,7 @@
 
 import UIKit
 
-protocol CustomerControllerDelegate: class {
+protocol CustomerControllerDelegate: AnyObject {
     func customerControllerDidCancel(_ customerController: CustomerViewController)
     func customerControllerDidLogout(_ customerController: CustomerViewController)
 }

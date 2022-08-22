@@ -26,7 +26,7 @@
 
 import UIKit
 
-protocol StorefrontTableViewDelegate: class {
+protocol StorefrontTableViewDelegate: AnyObject {
     func tableViewShouldBeginPaging(_ table: StorefrontTableView) -> Bool
     func tableViewWillBeginPaging(_ table: StorefrontTableView)
     func tableViewDidCompletePaging(_ table: StorefrontTableView)

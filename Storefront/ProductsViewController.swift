@@ -44,7 +44,8 @@ class ProductsViewController: UIViewController {
         super.viewDidLoad()
         
         self.configureCollectionView()
-        
+        print("LOADED PRODUCTS")
+
         Client.shared.fetchProducts(in: self.collection) { products in
             if let products = products {
                 self.products = products

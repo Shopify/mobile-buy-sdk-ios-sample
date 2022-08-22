@@ -30,8 +30,8 @@ import Pay
 
 final class Client {
     
-    static let shopDomain = "graphql.myshopify.com"
-    static let apiKey     = "8e2fef6daed4b93cf4e731f580799dd1"
+    static let shopDomain = Bundle.main.object(forInfoDictionaryKey: "SHOPIFY_STORE_URL") as! String
+    static let apiKey     = Bundle.main.object(forInfoDictionaryKey: "SHOPIFY_API_KEY") as! String
     static let merchantID = "merchant.com.your.id"
     static let locale   = Locale(identifier: "en-US")
     

@@ -26,7 +26,7 @@
 
 import UIKit
 
-protocol StorefrontCollectionViewDelegate: class {
+protocol StorefrontCollectionViewDelegate: AnyObject {
     func collectionViewShouldBeginPaging(_ collectionView: StorefrontCollectionView) -> Bool
     func collectionViewWillBeginPaging(_ collectionView: StorefrontCollectionView)
     func collectionViewDidCompletePaging(_ collectionView: StorefrontCollectionView)

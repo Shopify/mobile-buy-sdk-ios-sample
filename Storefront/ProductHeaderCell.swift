@@ -26,7 +26,7 @@
 
 import UIKit
 
-protocol ProductHeaderDelegate: class {
+protocol ProductHeaderDelegate: AnyObject {
     func productHeader(_ cell: ProductHeaderCell, didAddToCart sender: Any)
 }
 

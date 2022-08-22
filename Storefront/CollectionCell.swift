@@ -26,7 +26,7 @@
 
 import UIKit
 
-protocol CollectionCellDelegate: class {
+protocol CollectionCellDelegate: AnyObject {
     func cell(_ collectionCell: CollectionCell, didRequestProductsIn collection: CollectionViewModel, after product: ProductViewModel)
     func cell(_ collectionCell: CollectionCell, didSelectProduct product: ProductViewModel)
 }

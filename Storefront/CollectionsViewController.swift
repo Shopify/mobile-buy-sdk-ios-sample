@@ -38,7 +38,7 @@ class CollectionsViewController: UIViewController {
     //
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("LOADED COLLECTIONS")
         self.configureTableView()
         self.fetchCollections()
     }
