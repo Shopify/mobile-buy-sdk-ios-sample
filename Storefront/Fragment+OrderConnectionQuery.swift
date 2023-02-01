@@ -39,7 +39,7 @@ extension Storefront.OrderConnectionQuery {
                 .id()
                 .orderNumber()
                 .email()
-                .totalPriceV2 { $0
+                .totalPrice { $0
                     .amount()
                     .currencyCode()
                 }

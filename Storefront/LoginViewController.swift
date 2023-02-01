@@ -26,7 +26,7 @@
 
 import UIKit
 
-protocol LoginControllerDelegate: class {
+protocol LoginControllerDelegate: AnyObject {
     func loginControllerDidCancel(_ loginController: LoginViewController)
     func loginController(_ loginController: LoginViewController, didLoginWith email: String, passowrd: String)
 }

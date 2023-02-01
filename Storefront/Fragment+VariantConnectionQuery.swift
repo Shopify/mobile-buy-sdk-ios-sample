@@ -38,7 +38,7 @@ extension Storefront.ProductVariantConnectionQuery {
             .node { $0
                 .id()
                 .title()
-                .priceV2 { $0
+                .price { $0
                     .amount()
                     .currencyCode()
                 }

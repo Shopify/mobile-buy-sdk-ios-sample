@@ -33,7 +33,7 @@ extension Storefront.PaymentQuery {
         .id()
         .ready()
         .test()
-        .amountV2 { $0
+        .amount { $0
             .amount()
             .currencyCode()
         }

@@ -117,8 +117,8 @@ final class ClientQuery {
                         .id()
                         .title()
                         .descriptionHtml()
-                        .image(maxWidth: ClientQuery.maxImageDimension, maxHeight: ClientQuery.maxImageDimension) { $0
-                            .transformedSrc()
+                        .image { $0
+							.url()
                         }
                         
                         .products(first: Int32(productLimit), after: productCursor) { $0
@@ -363,7 +363,7 @@ final class ClientQuery {
                         .ready()
                         .shippingRates { $0
                             .handle()
-                            .priceV2 { $0
+                            .price { $0
                                 .amount()
                                 .currencyCode()
                             }

@@ -50,7 +50,7 @@ final class PaymentViewModel: ViewModel {
         self.id         = model.id.rawValue
         self.checkout   = model.checkout.viewModel
         self.creditCard = model.creditCard?.viewModel
-        self.amount     = model.amountV2.amount
+        self.amount     = model.amount.amount
         self.isTest     = model.test
         self.isReady    = model.ready
         self.error      = model.errorMessage

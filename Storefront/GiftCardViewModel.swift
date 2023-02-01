@@ -45,8 +45,8 @@ final class GiftCardViewModel: ViewModel {
         self.model            = model
         
         self.id             = model.id.rawValue
-        self.balance        = model.balanceV2.amount
-        self.amountUsed     = model.amountUsedV2.amount
+        self.balance        = model.balance.amount
+        self.amountUsed     = model.amountUsed.amount
         self.lastCharacters = model.lastCharacters
     }
 }

@@ -34,7 +34,7 @@ enum PaymentType {
     case shopPay
 }
 
-protocol TotalsControllerDelegate: class {
+protocol TotalsControllerDelegate: AnyObject {
     func totalsController(_ totalsController: TotalsViewController, didRequestPaymentWith type: PaymentType)
 }
 

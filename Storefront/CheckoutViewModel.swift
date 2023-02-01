@@ -85,11 +85,11 @@ final class CheckoutViewModel: ViewModel {
         self.giftCards        = model.appliedGiftCards.viewModels
         self.lineItems        = model.lineItems.edges.viewModels
         self.currencyCode     = model.currencyCode.rawValue
-        self.subtotalPrice    = model.subtotalPriceV2.amount
-        self.totalTax         = model.totalTaxV2.amount
+        self.subtotalPrice    = model.subtotalPrice.amount
+        self.totalTax         = model.totalTax.amount
         self.totalDuties      = model.totalDuties?.amount
-        self.totalPrice       = model.totalPriceV2.amount
-        self.paymentDue       = model.paymentDueV2.amount
+        self.totalPrice       = model.totalPrice.amount
+        self.paymentDue       = model.paymentDue.amount
         
         self.shippingDiscountAllocations = model.shippingDiscountAllocations.viewModels
 

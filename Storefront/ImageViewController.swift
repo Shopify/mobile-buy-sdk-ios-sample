@@ -26,7 +26,7 @@
 
 import UIKit
 
-protocol ImageControllerDelegate: class {
+protocol ImageControllerDelegate: AnyObject {
     func imageController(_ imageController: ImageViewController, didSelectImage image: UIImage?, at index: Int)
 }
 

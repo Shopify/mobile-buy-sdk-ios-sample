@@ -53,7 +53,7 @@ final class OrderViewModel: ViewModel {
         self.email               = model.node.email
         self.currentTotalDuties  = model.node.currentTotalDuties?.amount
         self.originalTotalDuties = model.node.originalTotalDuties?.amount
-        self.totalPrice          = model.node.totalPriceV2.amount
+        self.totalPrice          = model.node.totalPrice.amount
     }
 }
 

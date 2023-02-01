@@ -43,7 +43,7 @@ final class ImageViewModel: ViewModel {
         self.model    = model
         self.cursor   = model.cursor
         
-        self.url      = model.node.transformedSrc
+        self.url      = model.node.url
     }
 }
 

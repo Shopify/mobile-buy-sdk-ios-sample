@@ -50,11 +50,11 @@ extension Storefront.CheckoutQuery {
         
         .appliedGiftCards { $0
             .id()
-            .balanceV2 { $0
+            .balance { $0
                 .amount()
                 .currencyCode()
             }
-            .amountUsedV2 { $0
+            .amountUsed { $0
                 .amount()
                 .currencyCode()
             }
@@ -78,7 +78,7 @@ extension Storefront.CheckoutQuery {
         .shippingLine { $0
             .handle()
             .title()
-            .priceV2 { $0
+            .price { $0
                 .amount()
                 .currencyCode()
             }
@@ -91,7 +91,7 @@ extension Storefront.CheckoutQuery {
                 .node { $0
                     .variant { $0
                         .id()
-                        .priceV2 { $0
+                        .price { $0
                             .amount()
                             .currencyCode()
                         }
@@ -110,19 +110,19 @@ extension Storefront.CheckoutQuery {
         }
         .webUrl()
         .currencyCode()
-        .subtotalPriceV2 { $0
+        .subtotalPrice { $0
             .amount()
             .currencyCode()
         }
-        .totalTaxV2 { $0
+        .totalTax { $0
             .amount()
             .currencyCode()
         }
-        .totalPriceV2 { $0
+        .totalPrice { $0
             .amount()
             .currencyCode()
         }
-        .paymentDueV2 { $0
+        .paymentDue { $0
             .amount()
             .currencyCode()
         }

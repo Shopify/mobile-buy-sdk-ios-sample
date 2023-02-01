@@ -26,7 +26,7 @@
 
 import UIKit
 
-protocol Selectable: class {
+protocol Selectable: AnyObject {
     
     var highlightView: UIView { get }
 }

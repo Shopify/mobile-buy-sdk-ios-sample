@@ -33,6 +33,6 @@ extension GraphQL.AbstractResponse: Serializable {
     }
     
     func serialize() -> SerializedRepresentation {
-        return self.fields
+        return self.rawValue
     }
 }

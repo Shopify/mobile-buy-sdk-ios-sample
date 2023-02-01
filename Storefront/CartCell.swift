@@ -27,7 +27,7 @@
 
 import UIKit
 
-protocol CartCellDelegate: class {
+protocol CartCellDelegate: AnyObject {
     func cartCell(_ cell: CartCell, didUpdateQuantity quantity: Int)
 }
 
